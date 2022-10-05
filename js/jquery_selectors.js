@@ -2,10 +2,9 @@ function setEven(){
     $('li, span').css('font-weight','');
     var $evenItems = $('li:even'); // even reserved word jquery selector
     $evenItems.css('font-weight','bold');
-    $('span:contains(Even)').css('font-weight','bold'); // string content in html
+    $('span:contains(Dog)').css("background-color", "yellow", 'font-weight','bold'); // string content in html
     $('.label').html('Even'); // output header epal lang 
     }
-
 
     function setOdd(){
     $('li, span').css('font-weight','');

@@ -1,16 +1,15 @@
+// $(".radio-button").prop("disabled", true); // disable
 $(document).ready(function(){
     $('#formA input:text').keyup(function(){
-    $('#formB input:text').val($(this).val());});
+    $('#formB input:text').val($(this).val()).prop("disabled", "disabled");});
     $('#formA textarea').keyup(function(){
-    $('#formB textarea').val($(this).val());});
+    $('#formB textarea').val($(this).val()).prop("disabled", "disabled");});
     $('#formA input:radio').change(function(){
-    var radioB = $('#formB input[value=' +
-    $(this).val() + ']');
+    var radioB = $('#formB input[value=' + $(this).val() + ']');
     radioB.prop('checked', $(this).is(':checked'));
     });
     $('#formA input:checkbox').click(function(){
-    $('#formB input:checkbox').prop('checked',
-    $(this).prop('checked'));
+    $('#formB input:checkbox').prop('checked',$(this).prop('checked'));
     });
     $('#formA select').change(function(){
     $('#formB select').val($(this).val());});
